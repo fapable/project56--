@@ -92,6 +92,16 @@ header {
     border: 3px solid #F6B72D;
 }
 
+.basicButton{
+    border-radius: 3px;
+    background-color: #444444;
+    color: white;
+    font-size: 20px;
+    height: 35px;
+    margin-top: 20px;
+    border: 3px solid #F6B72D;
+}
+
 .textMiddle {
     vertical-align: center;
 }
