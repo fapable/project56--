@@ -1,62 +1,71 @@
-    <!DOCTYPE html>
-    <html lang="nl">
-    <head>
-        <meta charset="UTF-8">
-        <title>Future Gadget Lab</title>
-        <link rel="shortcut icon" type="image/png" href="favicon.png">
-        <!-- CSS Preload -->
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
-        <link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.min.css">
-        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Future Gadget Lab</title>
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+    <!-- CSS Preload -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
-        <!-- JavaScript Preload -->
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="js/priceSlider.js"></script>
-    </head>
-    <body>
-        <header id="theHeader" class="navbar-fixed-top">
-            <a href="https://www.futuregadgetlab.nl" title="Homepage">
-                <div class="logoContainer">
-                    <img class="logoImage" src="favicon.png" title="Logo" alt="Logo">
-                </div>
-            </a>
-        </header>
+    <!-- JavaScript Preload -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/priceSlider.js"></script>
+</head>
+<body>
+<header id="theHeader" class="navbar-fixed-top">
+    <a href="https://www.futuregadgetlab.nl" title="Homepage">
+        <div class="logoContainer">
+            <img class="logoImage" src="favicon.png" title="Logo" alt="Logo">
+        </div>
+    </a>
+    <div class="miniBar" style="height: calc(40% + 2px); background: #444444; border-bottom: 5px solid #F6B72D; border-top: 2px solid #F6B72D; padding-top: 4px;">
+        <a href="BBuilder.html"><button class="miniBarButton" style="margin-top: 3px;">PC builder</button></a>
+        <button class="miniBarButton" style="margin-top: 3px;">Componenten</button>
+        <button class="miniBarButton" style="margin-top: 3px;">Laptops</button>
+        <button class="miniBarButton" style="margin-top: 3px;">Aanbiedingen</button>
+        <button class="miniBarButton" style="margin-top: 3px;">Top sellers</button>
+    </div>
+</header>
 
-        <!-- Sidebar-->
-        <div class="sidebar" id="sidebar">
-            <div><img class="sidebarImage active first" src="images/cpu.png" title="cpu" alt="CPU"></div>
-            <div><img class="sidebarImage" src="images/cpu_cooler.png" title="cpu_cooler" alt="Cooler"></div>
-            <div><img class="sidebarImage" src="images/mobo.png" title="motherboard" alt="Motherboard"></div>
-            <div><img class="sidebarImage" src="images/ram.png" title="ram" alt="RAM"></div>
-            <div><img class="sidebarImage" src="images/gpu.png" title="gpu" alt="GPU"></div>
-            <div><img class="sidebarImage" src="images/psu.png" title="powersupply" alt="PSU"></div>
-            <div><img class="sidebarImage" src="images/ssd.png" title="ssd" alt="SSD"></div>
-            <div><img class="sidebarImage" src="images/hdd.png" title="hdd" alt="HDD"></div>
-            <div><img class="sidebarImage" src="images/case.png" title="behuizing" alt="Case"></div>
-            <div><img class="sidebarImage" src="images/disc_player.png" title="disc_player" alt="Player"></div>
-            <div><img class="sidebarImage" src="images/wifi.png" title="wifi" alt="Wi-Fi"></div>
-        </div>
+<!-- Sidebar-->
+<div class="sidebar" id="sidebar">
+    <div><img class="sidebarImage active first" src="images/cpu.png" title="cpu" alt="CPU"></div>
+    <div><img class="sidebarImage" src="images/cpu_cooler.png" title="cpu_cooler" alt="Cooler"></div>
+    <div><img class="sidebarImage" src="images/mobo.png" title="motherboard" alt="Motherboard"></div>
+    <div><img class="sidebarImage" src="images/ram.png" title="ram" alt="RAM"></div>
+    <div><img class="sidebarImage" src="images/gpu.png" title="gpu" alt="GPU"></div>
+    <div><img class="sidebarImage" src="images/psu.png" title="powersupply" alt="PSU"></div>
+    <div><img class="sidebarImage" src="images/ssd.png" title="ssd" alt="SSD"></div>
+    <div><img class="sidebarImage" src="images/hdd.png" title="hdd" alt="HDD"></div>
+    <div><img class="sidebarImage" src="images/case.png" title="behuizing" alt="Case"></div>
+    <div><img class="sidebarImage" src="images/disc_player.png" title="disc_player" alt="Player"></div>
+    <div><img class="sidebarImage" src="images/wifi.png" title="wifi" alt="Wi-Fi"></div>
+</div>
 
+</div>
+<div class="container">
+    <div class="row productContainer">
+        <img class="col-lg-2 col-md-3 col-sm-12 col-xs-12 productImage" src="http://via.placeholder.com/150x150">
+        <div class="col-lg-8 col-md-5 col-sm-6 col-xs-6 productInfo">
+            <h3>Title</h3>
+            <h4 class="productBrand">Merk</h4>
+            <p class="productDescription"> bla bla bla? <br/>bla bla bla.</p>
         </div>
-        <div class="container">
-            <div class="row productContainer">
-                <img class="col-lg-2 col-md-3 col-sm-12 col-xs-12 productImage" src="http://via.placeholder.com/150x150">
-                <div class="col-lg-8 col-md-5 col-sm-6 col-xs-6 productInfo">
-                    <h3>Title</h3>
-                    <h4 class="productBrand">Merk</h4>
-                    <p class="productDescription"> bla bla bla? <br/>bla bla bla.</p>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6 productButtons">
-                    <p class="productButtonsContainer">
-                        <button class="productButton">Bekijken</button><br/>
-                        <button class="productButton">Favorieten</button><br/>
-                        <button class="productButton">Kopen</button>
-                    </p>
-                </div>
-            </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6 productButtons">
+            <p class="productButtonsContainer">
+                <a href="ProductPage.html">
+                    <button class="productButton">Bekijken</button><br/>
+                </a>
+                <button class="productButton">Favorieten</button><br/>
+                <button class="productButton">Kopen</button>
+            </p>
         </div>
-    </body>
-    </html>
+    </div>
+</div>
+</body>
+</html>
