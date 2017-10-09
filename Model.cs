@@ -5,24 +5,22 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Models{
   public class FutureDBContext : DbContext {
-        public DbSet<Users> User { get; set; }
-        public DbSet<BookmarkLists> BookmarkList { get; set; }
-        public DbSet<Products> Product { get; set; }
-        public DbSet<Categories> Category { get; set; }
-        public DbSet<Brands> Brand { get; set; }
-        public DbSet<Bookmarks> Bookmark { get; set; }
+        public DbSet<Users> Users { get; set; }
+        public DbSet<BookmarkLists> BookmarkLists { get; set; }
+        public DbSet<Products> Products { get; set; }
+        public DbSet<Categories> Categories { get; set; }
+        public DbSet<Brands> Brands { get; set; }
+        public DbSet<Bookmarks> Bookmarks { get; set; }
         public DbSet<Factuur> Facturen { get; set; }
-        public DbSet<FactuurLists> FactuurList { get; set; }
-        public DbSet<UnregisteredUsers> UnregisteredUser { get; set; }
+        public DbSet<FactuurLists> FactuurLists { get; set; }
+        public DbSet<UnregisteredUsers> UnregisteredUsers { get; set; }
         public DbSet<UnregisteredFactuur> UnregisteredFacturen { get; set; }
-        public DbSet<RecommendedSystems> RecommendedSystem {get; set;}
-        public DbSet<Brands_Categories> Brands_Category {get; set;}
+        public DbSet<RecommendedSystems> RecommendedSystems {get; set;}
+        public DbSet<Brands_Categories> Brands_Categories {get; set;}
   }
 
 // We moeten nog een line toevoegen bij Startup.cs deze line te kunnen uncommenten.
 //   public FutureDBContext(DbContextOptions<FutureDBContext> options): base(options)
-//         { }
-//     }
 
     public class User {
         public int Id { get; set; }
@@ -127,5 +125,4 @@ namespace Models{
         public Products Products {get; set;}
         public int ProductsId {get; set;}
     }
-}
 }
