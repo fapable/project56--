@@ -5,25 +5,25 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Models{
   public class FutureDBContext : DbContext {
-        public DbSet<User> User { get; set; }
-        public DbSet<BookmarkList> BookmarkList { get; set; }
-        public DbSet<Products> Products { get; set; }
-        public DbSet<Categories> Categories { get; set; }
-        public DbSet<Brands> Brands { get; set; }
-        public DbSet<Bookmark> Bookmark { get; set; }
-        public DbSet<Factuur> Factuur { get; set; }
-        public DbSet<FactuurList> FactuurList { get; set; }
-        public DbSet<UnregisteredUser> UnregisteredUser { get; set; }
-        public DbSet<UnregisteredFactuur> UnregisteredFactuur { get; set; }
-        public DbSet<RecommendedSystems> RecommendedSystems {get; set;}
-        public DbSet<Brands_Categories> Brands_Categories {get; set;}
+        public DbSet<Users> User { get; set; }
+        public DbSet<BookmarkLists> BookmarkList { get; set; }
+        public DbSet<Products> Product { get; set; }
+        public DbSet<Categories> Category { get; set; }
+        public DbSet<Brands> Brand { get; set; }
+        public DbSet<Bookmarks> Bookmark { get; set; }
+        public DbSet<Factuur> Facturen { get; set; }
+        public DbSet<FactuurLists> FactuurList { get; set; }
+        public DbSet<UnregisteredUsers> UnregisteredUser { get; set; }
+        public DbSet<UnregisteredFactuur> UnregisteredFacturen { get; set; }
+        public DbSet<RecommendedSystems> RecommendedSystem {get; set;}
+        public DbSet<Brands_Categories> Brands_Category {get; set;}
 
 // We moeten nog een line toevoegen bij Startup.cs deze line te kunnen uncommenten.
 //   public FutureDBContext(DbContextOptions<FutureDBContext> options): base(options)
 //         { }
 //     }
 
-    public class User {
+    public class Users {
         public int Id { get; set; }
         public string UserName { get; set; }
         public string EMail { get; set; }
@@ -37,7 +37,7 @@ namespace Models{
         public int Phonenumber {get; set;}
     }
 
-    public class UnregisteredUser {
+    public class UnregisteredUsers {
         public int Id { get; set; }
         public string EMail { get; set; }
         public string BirthDate { get; set; }
@@ -53,21 +53,21 @@ namespace Models{
     public class UnregisteredFactuur {
         public int Id {get; set;}
         public string FactuurBon {get; set;}
-        public UnregisteredUser UnregisteredUser {get; set;}
-        public int UnregisteredUserId {get; set;}
+        public UnregisteredUsers UnregisteredUsers {get; set;}
+        public int UnregisteredUsersId {get; set;}
     }
 
     public class Factuur {
         public int Id {get; set;}
         public string FactuurBon {get; set;}
-        public User User {get; set;}
+        public Users Users {get; set;}
         public int UserId {get; set;}
     }
 
     public class FactuurList {
         public int Id {get; set;}
-        public User User {get; set;}
-        public int UserUsername {get; set;}
+        public Users Users {get; set;}
+        public int UsersUsername {get; set;}
     }
 
     public class Products {
@@ -116,8 +116,8 @@ namespace Models{
     public class BookmarkList {
         public int Id {get; set;}
         public string Name {get; set;}
-        public User User {get; set;}
-        public string UserUsername {get; set;}
+        public Users Users {get; set;}
+        public string UsersUsername {get; set;}
     }
 
     public class RecommendedSystems {
@@ -125,6 +125,6 @@ namespace Models{
         public string Gebruik {get; set;}
         public Products Products {get; set;}
         public int ProductsId {get; set;}
-        // in progress nog, maakt dit af my boy
     }
+}
 }
