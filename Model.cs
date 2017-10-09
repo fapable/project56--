@@ -17,13 +17,14 @@ namespace Models{
         public DbSet<UnregisteredFactuur> UnregisteredFacturen { get; set; }
         public DbSet<RecommendedSystems> RecommendedSystem {get; set;}
         public DbSet<Brands_Categories> Brands_Category {get; set;}
+  }
 
 // We moeten nog een line toevoegen bij Startup.cs deze line te kunnen uncommenten.
 //   public FutureDBContext(DbContextOptions<FutureDBContext> options): base(options)
 //         { }
 //     }
 
-    public class Users {
+    public class User {
         public int Id { get; set; }
         public string UserName { get; set; }
         public string EMail { get; set; }
@@ -37,7 +38,7 @@ namespace Models{
         public int Phonenumber {get; set;}
     }
 
-    public class UnregisteredUsers {
+    public class UnregisteredUser {
         public int Id { get; set; }
         public string EMail { get; set; }
         public string BirthDate { get; set; }
@@ -70,7 +71,7 @@ namespace Models{
         public int UsersUsername {get; set;}
     }
 
-    public class Products {
+    public class Product {
         public int Id { get; set; }
         public string Name {get; set;}
         public string Description {get; set;}
@@ -86,12 +87,12 @@ namespace Models{
 
     }
 
-    public class Brands {
+    public class Brand {
         public int Id {get; set;}
         public string Name {get; set;}
     }
 
-    public class Brands_Categories {
+    public class Brand_Category {
         public int Id {get; set;}
         public Brands Brands {get; set;}
         public int BrandsId {get; set;}
@@ -99,7 +100,7 @@ namespace Models{
         public int CategoriesId {get; set;}
     }
 
-    public class Categories {
+    public class Category {
         public int Id {get; set;}
         public string Name {get; set;}
     }
