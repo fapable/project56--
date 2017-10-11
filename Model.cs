@@ -122,6 +122,11 @@ namespace Models{
     public class RecommendedSystems {
         public int Id {get; set;}
         public string Gebruik {get; set;}
+        public string Level {get; set;}
+        public string Title {get; set;}
+        public string Short_Description {get; set;}
+        public string Long_Description {get; set;}
+        //public string Image_Path {get; set;} ik weet niet of dit een string is of een ander type dus heb ik het gecomment, laat mij maar weten wat dit is.
         public Products Products {get; set;}
         public int ProductsId {get; set;}
     }
