@@ -5,77 +5,77 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Models{
   public class FutureDBContext : DbContext {
-        public DbSet<Users> Users { get; set; }
-        public DbSet<BookmarkLists> BookmarkLists { get; set; }
-        public DbSet<Products> Products { get; set; }
-        public DbSet<Categories> Categories { get; set; }
-        public DbSet<Brands> Brands { get; set; }
-        public DbSet<Bookmarks> Bookmarks { get; set; }
+        public DbSet<Gebruikers> Gebruiker { get; set; }
+        public DbSet<OngeregistreerdeGebruikers> OngeregistreerdeGebruiker { get; set; }
+        public DbSet<Favorieten> Favoriet { get; set; }
+        public DbSet<FavorietenLijsten> FavorietenLijst { get; set; }
+        public DbSet<Products> Product { get; set; }
+        public DbSet<Categories> Category { get; set; }
+        public DbSet<Brands> Brand { get; set; }
         public DbSet<Factuur> Facturen { get; set; }
-        public DbSet<FactuurLists> FactuurLists { get; set; }
-        public DbSet<UnregisteredUsers> UnregisteredUsers { get; set; }
-        public DbSet<UnregisteredFactuur> UnregisteredFacturen { get; set; }
-        public DbSet<RecommendedSystems> RecommendedSystems {get; set;}
-        public DbSet<Brands_Categories> Brands_Categories {get; set;}
-  }
+        public DbSet<FactuurLijsten> FactuurLijst { get; set; }
+        public DbSet<OngeregistreerdeFactuur> OngeregistreerdeFacturen { get; set; }
+        public DbSet<RecommendedSystems> RecommendedSystem {get; set;}
+        public DbSet<Brands_Categories> Brands_Category {get; set;}
 
 // We moeten nog een line toevoegen bij Startup.cs deze line te kunnen uncommenten.
 //   public FutureDBContext(DbContextOptions<FutureDBContext> options): base(options)
+//         { }
+//     }
 
-    public class User {
+    public class Gebruikers {
         public int Id { get; set; }
-        public string UserName { get; set; }
+        public string Username { get; set; }
         public string EMail { get; set; }
-        public string BirthDate { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public string Geboortedatum {get; set;}
+        public string Voornaam { get; set; }
+        public string Achternaam { get; set; }
         public string Straat { get; set; }
         public string Huisnummer { get; set; }
         public string Postcode { get; set; }
         public string Stad { get; set; }
-        public int Phonenumber {get; set;}
+        public int Telefoonnummer {get; set;}
     }
 
-    public class UnregisteredUser {
+    public class OngeregistreerdeGebruikers {
         public int Id { get; set; }
         public string EMail { get; set; }
-        public string BirthDate { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public string Voornaam { get; set; }
+        public string Achternaam { get; set; }
         public string Straat { get; set; }
         public string Huisnummer { get; set; }
         public string Postcode { get; set; }
         public string Stad { get; set; }
-        public int Phonenumber {get; set;}
+        public int Telefoonnummer {get; set;}
     }
 
-    public class UnregisteredFactuur {
+    public class OngeregistreerdeFactuur {
         public int Id {get; set;}
         public string FactuurBon {get; set;}
-        public UnregisteredUsers UnregisteredUsers {get; set;}
-        public int UnregisteredUsersId {get; set;}
+        public OngeregistreerdeGebruikers OngeregistreerdeGebruikers {get; set;}
+        public int OngeregistreerdeGebruikersId {get; set;}
     }
 
     public class Factuur {
         public int Id {get; set;}
         public string FactuurBon {get; set;}
-        public Users Users {get; set;}
-        public int UserId {get; set;}
+        public Gebruikers Gebruikers {get; set;}
+        public int GebruikersId {get; set;}
     }
 
-    public class FactuurList {
+    public class FactuurLijst {
         public int Id {get; set;}
-        public Users Users {get; set;}
-        public int UsersUsername {get; set;}
+        public Gebruikers Gebruikers {get; set;}
+        public int GebruikersUsername {get; set;}
     }
 
-    public class Product {
+    public class Products {
         public int Id { get; set; }
-        public string Name {get; set;}
+        public string Title {get; set;}
         public string Description {get; set;}
         public string Short_Description {get; set;}
-        public string Specs {get; set;}
-        public int Aantal {get; set;}
+        public string Specification {get; set;}
+        public int Stock {get; set;}
         public float Price {get; set;}
         public int Amount_Sold {get; set;}
         public Brands Brands {get; set;}
@@ -85,12 +85,12 @@ namespace Models{
 
     }
 
-    public class Brand {
+    public class Brands {
         public int Id {get; set;}
         public string Name {get; set;}
     }
 
-    public class Brand_Category {
+    public class Brands_Categories {
         public int Id {get; set;}
         public Brands Brands {get; set;}
         public int BrandsId {get; set;}
@@ -98,25 +98,25 @@ namespace Models{
         public int CategoriesId {get; set;}
     }
 
-    public class Category {
+    public class Categories {
         public int Id {get; set;}
         public string Name {get; set;}
     }
 
-    public class Bookmark {
+    public class Favorieten {
         public int Id {get; set;}
-        public BookmarkList BookmarkList {get; set;}
-        public int BookmarkListId {get; set;}
+        public FavorietenLijsten FavorietenLijsten {get; set;}
+        public int FavorietenLijstenId {get; set;}
         public Products Products {get; set;}
         public int ProductsId {get; set;}
         
     }
 
-    public class BookmarkList {
+    public class FavorietenLijsten {
         public int Id {get; set;}
         public string Name {get; set;}
-        public Users Users {get; set;}
-        public string UsersUsername {get; set;}
+        public Gebruikers Gebruikers {get; set;}
+        public string GebruikersUsername {get; set;}
     }
 
     public class RecommendedSystems {
