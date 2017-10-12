@@ -10,6 +10,7 @@ namespace Models{
         public DbSet<Favorieten> Favoriet { get; set; }
         public DbSet<FavorietenLijsten> FavorietenLijst { get; set; }
         public DbSet<Products> Product { get; set; }
+        public DbSet<Laptops> Laptop { get; set;}
         public DbSet<Categories> Category { get; set; }
         public DbSet<Brands> Brand { get; set; }
         public DbSet<Factuur> Facturen { get; set; }
@@ -118,7 +119,16 @@ namespace Models{
         public Gebruikers Gebruikers {get; set;}
         public string GebruikersUsername {get; set;}
     }
-
+    
+    public class Laptops { // CPU, GPU, RAM, Screen, HDD, SSD, Weight, Ports (HDMI, USB etc.), Operating System, Disc player, GPU memory.
+        public int Id {get; set;}
+        public float Price {get; set;}
+        public int Stock {get; set;}
+        public int Amount_Sold {get; set;}
+        public string Description {get; set}
+        public string Short_Description {get; set;}
+        public string Image_Path {get; set;}
+          
     public class RecommendedSystems {
         public int Id {get; set;}
         public string Gebruik {get; set;}
