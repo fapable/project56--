@@ -1,0 +1,71 @@
+@model IEnumerable<MVC.Models.RecommendedSystem>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Gebruik)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Level)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Title)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Short_Description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Long_Description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Image_Path)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProductsId)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gebruik)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Level)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Short_Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Long_Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Image_Path)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductsId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

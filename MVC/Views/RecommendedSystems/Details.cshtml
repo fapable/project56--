@@ -1,0 +1,60 @@
+@model MVC.Models.RecommendedSystem
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>RecommendedSystem</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Gebruik)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Gebruik)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Level)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Level)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Short_Description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Short_Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Long_Description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Long_Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Image_Path)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Image_Path)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductsId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ProductsId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

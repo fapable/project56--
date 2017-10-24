@@ -1,0 +1,78 @@
+@model MVC.Models.Gebruiker
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Gebruiker</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Username)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Username)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EMail)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EMail)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Geboortedatum)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Geboortedatum)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Voornaam)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Voornaam)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Achternaam)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Achternaam)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Straat)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Straat)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Huisnummer)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Huisnummer)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Postcode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Postcode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Stad)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Stad)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefoonnummer)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Telefoonnummer)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
